@@ -1,0 +1,1 @@
+# SafeVision - Metric Card Component

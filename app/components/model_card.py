@@ -1,0 +1,1 @@
+# SafeVision - Model Card Component
