@@ -1,5 +1,6 @@
 # Interface Gráfica
 streamlit>=1.30.0
+streamlit-option-menu>=0.4.0
 
 # Visão Computacional e Machine Learning
 ultralytics>=8.1.0
