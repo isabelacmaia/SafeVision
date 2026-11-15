@@ -1,1 +1,0 @@
-# SafeVision - Keras Classifier
