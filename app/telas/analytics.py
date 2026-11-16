@@ -71,7 +71,6 @@ def render_page():
     
     for i, linha in df.iterrows():
         valores = [linha['Precisão (%)'], linha['Revocação (%)'], linha['mAP@50 (%)'], linha['mAP@50-95 (%)']]
-        # Fecha o polígono repetindo o primeiro valor no final
         valores.append(valores[0])
         categorias_fechadas = categorias + [categorias[0]]
         

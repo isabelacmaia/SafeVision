@@ -67,7 +67,7 @@ def render_page():
             
             with st.spinner("Executando inferências simultâneas..."):
                 
-                # --- COLUNA ESQUERDA: YOLO11s ---
+                # COLUNA ESQUERDA: YOLO11s
                 with col_yolo:
                     st.markdown("<h4 style='text-align: center;'><i class='bi bi-lightning-charge' style='color: #FF9900;'></i> YOLO11s (CNN)</h4>", unsafe_allow_html=True)
                     if yolo_model:
@@ -103,7 +103,7 @@ def render_page():
                     else:
                         st.warning("Modelo YOLO11s não encontrado. Treine-o e adicione em pesos/yolo11s_best.pt")
                         
-                # --- COLUNA DIREITA: RT-DETR-L ---
+                # COLUNA DIREITA: RT-DETR-L
                 with col_rtdetr:
                     st.markdown("<h4 style='text-align: center;'><i class='bi bi-eye' style='color: #FF9900;'></i> RT-DETR-L (Transformer)</h4>", unsafe_allow_html=True)
                     if rtdetr_model:
@@ -139,7 +139,7 @@ def render_page():
                     else:
                         st.info("Modelo RT-DETR-L não encontrado. Aguardando arquivo `pesos/rtdetr_best.pt`.")
             
-            # --- TABELA DE SÍNTESE COMPARATIVA ---
+            # TABELA DE SÍNTESE COMPARATIVA
             if len(dados_relatorio) > 0:
                 st.markdown("---")
                 st.markdown("### <i class='bi bi-table' style='color: #FF9900;'></i> Síntese do Embate", unsafe_allow_html=True)

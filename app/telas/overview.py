@@ -61,7 +61,7 @@ def render_page():
             "Quantidade": [45, 30, 14]
         })
         
-        # Gráfico de Rosca (Donut)
+        # Gráfico de Rosca
         fig_pizza = px.pie(
             df_pizza, 
             values="Quantidade", 

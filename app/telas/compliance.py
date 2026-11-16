@@ -27,12 +27,12 @@ def render_page():
     if arquivo_imagem is not None:
         imagem = Image.open(arquivo_imagem)
         
-        # Mostra a imagem original menorzinhas para contexto
+        # Mostra a imagem original menor para contexto
         st.image(imagem, caption="Imagem sob auditoria", use_container_width=True)
         
         if st.button("Executar Auditoria de Segurança", type="primary"):
             with st.spinner("Analisando imagem e calculando heurística espacial..."):
-                # 1. Inferência Silenciosa (não mostramos a imagem anotada de cara)
+                # 1. Inferência Silenciosa
                 img_anotada, dados_brutos = detector.predict(imagem)
                 
                 # 2. Análise de Conformidade

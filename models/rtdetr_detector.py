@@ -23,7 +23,7 @@ class RTDETRDetector:
         # Executa o modelo
         resultados = self.model(image, conf=conf_threshold)
         
-        # Pega o primeiro resultado (pois passamos apenas 1 imagem por vez)
+        # Pega o primeiro resultado (pois passa apenas 1 imagem por vez)
         resultado_atual = resultados[0]
         
         # Gera a matriz da imagem com as caixas e rótulos desenhados

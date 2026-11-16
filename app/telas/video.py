@@ -87,7 +87,7 @@ def render_page():
             qtd_pessoas, qtd_capacetes, qtd_coletes = 0, 0, 0
             ann_yolo, ann_rtdetr = None, None
             
-            # --- Inferência YOLO ---
+            # Inferência YOLO
             if model_yolo is not None:
                 res_yolo = model_yolo.track(frame, persist=True, conf=0.45, verbose=False)[0]
                 ann_yolo = cv2.cvtColor(res_yolo.plot(), cv2.COLOR_BGR2RGB)
@@ -98,7 +98,7 @@ def render_page():
                         classes = res_yolo.boxes.cls.cpu().numpy().astype(int)
                         qtd_pessoas, qtd_capacetes, qtd_coletes = (classes==CLASS_PERSON).sum(), (classes==CLASS_HARDHAT).sum(), (classes==CLASS_VEST).sum()
 
-            # --- Inferência RT-DETR ---
+            # Inferência RT-DETR
             if model_rtdetr is not None:
                 res_rtdetr = model_rtdetr.track(frame, persist=True, conf=0.45, verbose=False)[0]
                 ann_rtdetr = cv2.cvtColor(res_rtdetr.plot(), cv2.COLOR_BGR2RGB)
@@ -109,7 +109,7 @@ def render_page():
                         classes = res_rtdetr.boxes.cls.cpu().numpy().astype(int)
                         qtd_pessoas, qtd_capacetes, qtd_coletes = (classes==CLASS_PERSON).sum(), (classes==CLASS_HARDHAT).sum(), (classes==CLASS_VEST).sum()
 
-            # --- Atualiza Interface de Vídeo ---
+            # Atualiza Interface de Vídeo
             if "Comparação" in modo:
                 frame_yolo.image(ann_yolo, channels="RGB", use_container_width=True)
                 frame_rtdetr.image(ann_rtdetr, channels="RGB", use_container_width=True)
@@ -118,7 +118,7 @@ def render_page():
             elif "RT-DETR" in modo:
                 frame_placeholder.image(ann_rtdetr, channels="RGB", use_container_width=True)
 
-            # --- Atualiza as Métricas em Tempo Real ---
+            # Atualiza as Métricas em Tempo Real
             end_time = time.time()
             fps = 1 / (end_time - start_time) if (end_time - start_time) > 0 else 0
             fps_placeholder.metric("FPS", f"{fps:.1f}")
@@ -129,9 +129,7 @@ def render_page():
         cap.release()
         os.unlink(tfile.name)
         
-        # ==========================================================
         # RELATÓRIO FINAL CONSOLIDADO (Aparece quando o vídeo acaba)
-        # ==========================================================
         st.success("✅ Processamento de vídeo concluído!")
         st.markdown("### <i class='bi bi-table' style='color: #FF9900;'></i> Relatório Final de Detecções Únicas", unsafe_allow_html=True)
         

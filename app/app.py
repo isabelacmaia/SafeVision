@@ -5,7 +5,7 @@ import os
 # A configuração da página DEVE ser o primeiro comando do Streamlit
 st.set_page_config(page_title="SafeVision", page_icon="🛡️", layout="wide")
 
-# --- INÍCIO DO CSS GLOBAL (Degradê e Ícones) ---
+# INÍCIO DO CSS GLOBAL (Degradê e Ícones)
 st.markdown("""
     <style>
     /* Importa os ícones vetoriais (flat) do Bootstrap para todo o projeto */
@@ -22,7 +22,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-# --- FIM DO CSS GLOBAL ---
+# FIM DO CSS GLOBAL 
 
 # Adiciona o diretório raiz do projeto ao Path do Python para resolver os imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
