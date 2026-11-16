@@ -13,30 +13,30 @@ def render_sidebar():
             menu_title=None,
             options=[
                 "Visão Geral", 
-                "Detecção", 
-                "Vídeo",
-                "Comparação", 
-                "Analytics",
-                "Conformidade", 
-                "Dataset", 
-                "Modelos"
+                "Detecção em Imagem",
+                "Comparação em Imagem",
+                "Telemetria em Vídeo",
+                "Laudo de Conformidade",
+                "Dashboard Analytics",   
+                "Dataset de Treino", 
+                "Modelos (Baseline)" 
             ],
             icons=[
                 "house",           
-                "camera-video",
-                "film",    
-                "layout-split",    
-                "graph-up",        
-                "shield-check",    
-                "database",        
-                "cpu"              
+                "image",         
+                "images",
+                "camera-reels",
+                "shield-check",
+                "graph-up",    
+                "database",   
+                "cpu"       
             ],
             default_index=0,
             styles={
                 "container": {"padding": "0!important", "background-color": "transparent"},
-                "icon": {"color": "#FF9900", "font-size": "16px"}, # Ícone ligeiramente menor
+                "icon": {"color": "#FF9900", "font-size": "16px"}, 
                 "nav-link": {
-                    "font-size": "13px", # Letra do menu reduzida para um padrão SaaS mais limpo
+                    "font-size": "13px", 
                     "text-align": "left", 
                     "margin": "2px 0px", 
                     "--hover-color": "#333333"

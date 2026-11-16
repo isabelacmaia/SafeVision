@@ -37,13 +37,13 @@ modulo_ativo = render_sidebar()
 # Mapeamento limpo entre o nome do menu e a função de renderização correspondente
 rotas = {
     "Visão Geral": overview.render_page,
-    "Detecção": detection.render_page,
-    "Comparação": comparison.render_page,
-    "Analytics": analytics.render_page,
-    "Conformidade": compliance.render_page,
-    "Dataset": dataset.render_page,
-    "Modelos": models.render_page,
-    "Vídeo": video.render_page
+    "Detecção em Imagem": detection.render_page,
+    "Comparação em Imagem": comparison.render_page,
+    "Telemetria em Vídeo": video.render_page,
+    "Laudo de Conformidade": compliance.render_page,
+    "Dashboard Analytics": analytics.render_page,
+    "Dataset de Treino": dataset.render_page,
+    "Modelos (Baseline)": models.render_page
 }
 
 # Roteador central dinâmico
