@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 def render_sidebar():
     with st.sidebar:
         # Cabeçalho executivo com tipografia reduzida
-        st.markdown("<h2 style='text-align: center; color: #FF9900; font-size: 24px; margin-bottom: 0;'>🛡️ SafeVision</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; color: #FF9900; font-size: 24px; margin-bottom: 0;'><i class='bi bi-shield-fill-check'></i> SafeVision</h2>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; color: #A8A8A8; font-size: 12px; margin-top: 0;'>Monitoramento de EPIs</p>", unsafe_allow_html=True)
         st.markdown("---")
         

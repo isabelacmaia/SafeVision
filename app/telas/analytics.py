@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def render_page():
-    st.title("📈 Analytics e Desempenho (Resultados Reais)")
+    st.markdown("<h1><i class='bi bi-graph-up' style='color: #FF9900;'></i> Analytics e Desempenho (Resultados Reais)</h1>", unsafe_allow_html=True)
     st.write("Análise comparativa das métricas oficiais de validação geradas após o treinamento no Google Colab.")
 
     # 1. INSIRA AQUI OS SEUS DADOS REAIS DO COLAB
@@ -21,7 +21,7 @@ def render_page():
     df = pd.DataFrame(dados_reais)
     
     # 2. RENDERIZAÇÃO DOS GRÁFICOS
-    st.subheader("📋 Tabela Consolidada de Desempenho")
+    st.markdown("<h3><i class='bi bi-table' style='color: #FF9900;'></i> Tabela Consolidada de Desempenho</h3>", unsafe_allow_html=True)
     st.dataframe(df, use_container_width=True, hide_index=True)
     st.divider()
     
@@ -62,7 +62,7 @@ def render_page():
     st.divider()
     
     # 3. Gráfico de Radar (Radar Chart) para Comparação Multidimensional
-    st.subheader("🕸️ Comparação Multidimensional")
+    st.markdown("<h3><i class='bi bi-radar' style='color: #FF9900;'></i> Comparação Multidimensional</h3>", unsafe_allow_html=True)
     st.write("O gráfico de radar ilustra o balanço (trade-off) entre os modelos.")
     
     fig_radar = go.Figure()
