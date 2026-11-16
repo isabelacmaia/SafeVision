@@ -66,12 +66,12 @@ def render_page():
     
     with col_ssd:
         with st.container(border=True):
-            st.markdown("#### SSD (Single Shot MultiBox Detector)")
-            st.write("Modelo pioneiro de detecção em estágio único. Será utilizado para avaliar a evolução histórica do desempenho temporal (FPS).")
-            st.info("Status: Planejado")
+            st.markdown("#### <i class='bi bi-box-seam' style='color: #FF9900;'></i> SSD (Single Shot MultiBox Detector)", unsafe_allow_html=True)
+            st.write("Modelo pioneiro de detecção em estágio único. Estudado na fundamentação como precursor arquitetural das redes modernas.")
+            st.info("Status: Baseline Teórico")
             
     with col_rcnn:
         with st.container(border=True):
-            st.markdown("#### Faster R-CNN")
-            st.write("Modelo de dois estágios (Two-Stage). Extremamente preciso, mas custoso computacionalmente. Servirá como teto de métrica (mAP).")
-            st.info("Status: Planejado")
+            st.markdown("#### <i class='bi bi-boxes' style='color: #FF9900;'></i> Faster R-CNN", unsafe_allow_html=True)
+            st.write("Modelo clássico de dois estágios. Extremamente preciso, porém computacionalmente inviável para processamento de CFTV em tempo real.")
+            st.info("Status: Baseline Teórico")
