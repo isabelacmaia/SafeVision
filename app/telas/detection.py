@@ -3,6 +3,7 @@ import streamlit as st
 from PIL import Image
 from models.yolo_detector import YoloDetector
 from core.compliance import ComplianceAnalyzer
+import json
 
 @st.cache_resource
 def carregar_detector():
@@ -32,7 +33,7 @@ def render_page():
             st.subheader("Imagem Original")
             st.image(imagem, use_container_width=True)
         
-        confianca = st.slider("Limiar de Confiança", min_value=0.1, max_value=1.0, value=0.5, step=0.05)
+        confianca = st.slider("Limiar de Confiança", min_value=0.0, max_value=1.0, value=0.45, help="Define o nível mínimo de certeza exigido da Inteligência Artificial. Valores mais baixos forçam o modelo a exibir mais objetos (aumentando o risco de falsos positivos), enquanto valores altos filtram a cena e exibem apenas as detecções com alta margem de segurança.")
         
         if st.button("Executar Inferência", type="primary"):
             with st.spinner("Processando Inteligência e Associação Espacial..."):
@@ -70,4 +71,4 @@ def render_page():
 
                 # Logs crus para auditoria/debug
                 with st.expander("Ver JSON de Detecções (Logs brutos)"):
-                    st.json(dados_brutos.tojson())
+                    st.json(dados_brutos.to_json())
