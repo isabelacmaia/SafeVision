@@ -14,6 +14,7 @@ def render_sidebar():
             options=[
                 "Visão Geral", 
                 "Detecção", 
+                "Vídeo",
                 "Comparação", 
                 "Analytics",
                 "Conformidade", 
@@ -22,7 +23,8 @@ def render_sidebar():
             ],
             icons=[
                 "house",           
-                "camera-video",    
+                "camera-video",
+                "film",    
                 "layout-split",    
                 "graph-up",        
                 "shield-check",    

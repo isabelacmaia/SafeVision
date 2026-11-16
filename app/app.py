@@ -29,7 +29,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Importações de todos os nossos módulos
 from components.sidebar import render_sidebar
-from telas import overview, detection, comparison, analytics, compliance, dataset, models
+from telas import overview, detection, comparison, analytics, compliance, dataset, models, video
 
 # Renderiza a barra lateral e captura a escolha do usuário
 modulo_ativo = render_sidebar()
@@ -42,7 +42,8 @@ rotas = {
     "Analytics": analytics.render_page,
     "Conformidade": compliance.render_page,
     "Dataset": dataset.render_page,
-    "Modelos": models.render_page
+    "Modelos": models.render_page,
+    "Vídeo": video.render_page
 }
 
 # Roteador central dinâmico
